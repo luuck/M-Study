@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="gb2312">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <html>
+    <title>rem自适应页面</title>
+    <link rel="stylesheet" href="comm.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="javascript:void(0)" class="btn1">我是百分比%的自适应按钮</a>
+    <a href="javascript:void(0)" class="btn2">我是rem的自适应按钮</a>
+    <script>
+        (function(win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+
+            function setFont() {
+                var cliWidth = html.clientWidth;
+                html.style.fontSize = 100 * (cliWidth / 640) + 'px';
+            }
+            win.addEventListener('resize', setFont, false)
+            doc.addEventListener('DOMContentLoaded', setFont, false)
+        })(window, document);
+    </script>
+
+</body>
+
+</html>

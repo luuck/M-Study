@@ -1,0 +1,25 @@
+a {
+    display: block;
+    background: #ff4664;
+    color: #fff;
+    box-shadow: 2px 2px 4px #ddd;
+    text-align: center;
+    font-size: 0.3rem;
+    line-height: 0.5rem;
+    border-radius: 5px
+}
+
+a.btn1 {
+    margin: 20px auto;
+    height: 0;
+    width: 78.1%;
+    padding-bottom: 7.8%;
+    /*为了防止在一些低版本的浏览器中，因为font-size或者line-height等属性影响到height的值,因此我们需要将其设为0，而高度完全使用padding-bottom或则padding-top将元素撑起来。
+    */
+}
+
+a.btn2 {
+    margin: 0 auto;
+    height: 0.5rem;
+    width: 5rem;
+}
